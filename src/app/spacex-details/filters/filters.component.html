@@ -1,0 +1,31 @@
+<h2>Filters</h2>
+<div class="filter-heading">
+  <div class="">Launch Year</div>
+  <hr>
+</div>
+
+<div class="filter-buttons">
+  <button class="filter-button" *ngFor="let year of years" (click)="yearSelected(year)" [ngClass]="selectedYear===year?'filter-button filter-button-selected':'filter-button'">{{year}}</button>
+</div>
+
+<div class="filter-heading">
+  <div class="">Successful Launch</div>
+  <hr>
+</div>
+
+<div class="filter-buttons">
+  <button class="filter-button"  (click)="launchSelected(true)" [ngClass]="(launchSuccess===true)?'filter-button filter-button-selected':'filter-button'">{{'True'}}</button>
+  <button class="filter-button"  (click)="launchSelected(false)" [ngClass]="(launchSuccess===false)?'filter-button filter-button-selected':'filter-button'">{{'False'}}</button>
+</div>
+
+<div class="filter-heading">
+  <div class="">Successful Landing</div>
+  <hr>
+</div>
+
+<div class="filter-buttons">
+  <button class="filter-button"  (click)="landingSelected(true)" [ngClass]="(landingSuccess===true)?'filter-button filter-button-selected':'filter-button'">{{'True'}}</button>
+  <button class="filter-button"  (click)="landingSelected(false)" [ngClass]="(landingSuccess===false)?'filter-button filter-button-selected':'filter-button'">{{'False'}}</button>
+</div>
+
+

@@ -1,0 +1,13 @@
+<!-- <require from="./filters/filters-component"></require>
+<require from="./programs/programs-component"></require> -->
+<div class="main-heading">
+    <h1>SpaceX Launch Programs</h1>
+</div>
+
+<div class="filters-container"  *ngIf="appliedFilters && areFiltersLoaded">
+    <spacex-filters (filtersUpdated)="filtersUpdated($event)" [filters]="appliedFilters"></spacex-filters>
+</div>
+<div class="programs-container">
+    <spacex-programs [missions]="filteredData" *ngIf="filteredData && isDataLoaded"></spacex-programs>
+</div>
+

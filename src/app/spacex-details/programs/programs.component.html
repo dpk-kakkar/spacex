@@ -1,0 +1,54 @@
+<!-- <div class="program-container m-t-30 m-b-20" *ngFor="let mission of missions">
+  <div class="mission-icon">
+    <img class="mission-image" src="{{mission.launchImage}}" alt="mission Image">
+  </div>
+  <div class="heading mission-heading">{{mission.missionName}}</div>
+  <div class="heading mission-ids">
+    Mission Ids:
+    <li class="mission-id heading-value" *ngFor="let id of mission.missionId">
+      {{id}}
+    </li>
+  </div>
+  <div class="heading">
+    Succeful Launch: <span class="heading-value"> {{mission.launchSuccess}} </span>
+    </div> 
+    <div class="heading">
+      Succeful Landing: <span class="heading-value"> {{mission.successfullLanding}} </span>
+      </div> 
+</div>
+ -->
+<div *ngFor="let mission of missions; let i = index" >
+  <div class="program-container" id="mission{{i}}">
+    <div class="mission-icon">
+      <img
+        class="mission-image"
+        src="{{ mission.launchImage }}"
+        alt="mission Image"
+      />
+    </div>
+    <div class="detail-section">
+      <div class="heading mission-heading">{{ mission.missionName }}</div>
+      <div class="heading mission-ids">
+        Mission Ids:
+        <li
+          class="mission-id heading-value"
+          *ngFor="let id of mission.missionId"
+        >
+          {{ id }}
+        </li>
+      </div>
+      <div class="heading">
+        Launch Year:
+        <span class="heading-value"> {{ mission.launchYear }} </span>
+      </div>
+      <div class="heading">
+        Succeful Launch:
+        <span class="heading-value"> {{ mission.launchSuccess }} </span>
+      </div>
+      <div class="heading">
+        Succeful Landing:
+        <span class="heading-value"> {{ mission.successfullLanding }} </span>
+      </div>
+    </div>
+  </div>
+</div>
