@@ -1,5 +1,4 @@
-<!-- <require from="./filters/filters-component"></require>
-<require from="./programs/programs-component"></require> -->
+
 <div class="main-heading">
     <h1>SpaceX Launch Programs</h1>
 </div>
@@ -9,5 +8,9 @@
 </div>
 <div class="programs-container">
     <spacex-programs [missions]="filteredData" *ngIf="filteredData && isDataLoaded"></spacex-programs>
+    <div *ngIf="!isDataLoaded">
+        <spacex-loader [isSmall]="true"></spacex-loader>
+    </div>
+    
 </div>
 

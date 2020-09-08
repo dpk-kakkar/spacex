@@ -31,8 +31,10 @@ export class SpacexDetailsComponent implements OnInit {
   private buildFilters(queryParams) {
     this.appliedFilters = new Filters();
     this.appliedFilters.year = queryParams.launch_year?parseInt(queryParams.launch_year):queryParams.launch_year;
-    this.appliedFilters.launchSuccess = !!!queryParams.launch_succes;
-    this.appliedFilters.landingSuccess = !!!queryParams.landing_success;
+    this.appliedFilters.launchSuccess =queryParams.launch_succes? !!!queryParams.launch_succes:null;
+    this.appliedFilters.landingSuccess =queryParams.landing_success? !!!queryParams.landing_success:null;
+    console.error(this.appliedFilters);
+    
     this.areFiltersLoaded=true;
     this.fetchData();
   }
