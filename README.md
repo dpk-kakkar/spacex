@@ -14,6 +14,12 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 
 
-## Performance measurement
+## Lighthouse results
+## Performance
 ![Alt text](/screenshots/lighthouse-overall.png "Optional Title")
 
+## SEO
+![Alt text](/screenshots/lighthouse-SEO.png "Optional Title")
+
+## Accessibility
+![Alt text](/screenshots/lighthouse-accessibility.png "Optional Title")
