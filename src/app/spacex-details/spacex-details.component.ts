@@ -33,7 +33,7 @@ export class SpacexDetailsComponent implements OnInit {
     this.appliedFilters.year = queryParams.launch_year?parseInt(queryParams.launch_year):queryParams.launch_year;
     this.appliedFilters.launchSuccess =queryParams.launch_succes? !!!queryParams.launch_succes:null;
     this.appliedFilters.landingSuccess =queryParams.landing_success? !!!queryParams.landing_success:null;
-    console.error(this.appliedFilters);
+    
     
     this.areFiltersLoaded=true;
     this.fetchData();
@@ -49,7 +49,6 @@ export class SpacexDetailsComponent implements OnInit {
     this.isDataLoaded = false;
     this.spaceXService.fetchData(this.appliedFilters).then((response) => {
       this.isDataLoaded = true;
-      console.error(response);
       this.filteredData = response;
     });
   }

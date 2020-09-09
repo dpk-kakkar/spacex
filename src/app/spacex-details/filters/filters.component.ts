@@ -34,8 +34,6 @@ export class FiltersComponent implements OnInit {
 
   ngOnInit() {
     if (this.filters) {
-      console.error(this.filters);
-      
       this.selectedYear = this.filters.year;
       this.launchSuccess = this.filters.launchSuccess;
       this.landingSuccess = this.filters.landingSuccess;

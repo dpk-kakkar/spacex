@@ -13,7 +13,7 @@ export class ProgramsComponent implements OnInit, AfterViewInit {
   constructor() {}
 
   ngOnInit() {
-    console.error(this.missions);
+    
   }
 
   ngAfterViewInit() {
@@ -24,7 +24,7 @@ export class ProgramsComponent implements OnInit, AfterViewInit {
       for (var i = 0; i < this.missions.length; i++) {
         const elem = document.getElementById("mission" + i);
         const height = elem ? elem.clientHeight : 200;
-        //console.error(height);
+        
         
         if (height > this.maxHeight) {
           this.maxHeight = height;
