@@ -1,6 +1,6 @@
 # Spacex
 
-This application display space programs and filters can be applied.
+This application displays space programs. These programs can be filtered based on year, launch success and landing success.
 
 ## Development server
 
