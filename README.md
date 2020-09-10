@@ -1,6 +1,6 @@
 # Spacex
 
-This application display space programs and filters can be applied.
+This application displays space programs. These programs can be filtered based on year, launch success and landing success.
 
 ## Development server
 
@@ -14,6 +14,12 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 
 
-## Performance measurement
+## Lighthouse results
+### Performance
+![Alt text](/screenshots/lighthouse-overall.png "Optional Title")
 
+### SEO
+![Alt text](/screenshots/lighthouse-SEO.png "Optional Title")
 
+### Accessibility
+![Alt text](/screenshots/lighthouse-accessibility.png "Optional Title")
