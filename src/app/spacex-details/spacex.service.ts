@@ -1,7 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { query } from "@angular/core/src/render3";
 import { getQueryPredicate } from "@angular/compiler/src/render3/view/util";
 
 @Injectable({

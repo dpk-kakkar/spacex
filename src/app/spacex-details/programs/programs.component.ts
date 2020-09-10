@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, AfterViewInit } from "@angular/core";
 import { SPACEXMission } from "../spacex.service";
-import { element } from "@angular/core/src/render3";
 
 @Component({
   selector: "spacex-programs",
