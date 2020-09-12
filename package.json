@@ -3,13 +3,17 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "npm run serve:ssr",
     "build": "ng build --aot --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod",
-    "heroku-postbuild": "npm run build"
+    "postinstall": "npm run build:ssr",
+    "heroku-postbuild": "npm run build:ssr",
+    "dev:ssr": "ng run spacex:serve-ssr",
+    "serve:ssr": "node dist/spacex/server/main.js",
+    "build:ssr": "ng build --prod && ng run spacex:server:production",
+    "prerender": "ng run spacex:prerender"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +26,7 @@
     "@angular/platform-browser-dynamic": "~10.1.0",
     "@angular/platform-server": "~10.1.0",
     "@angular/router": "~10.1.0",
+    "@nguniversal/express-engine": "^10.1.0",
     "express": "^4.15.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

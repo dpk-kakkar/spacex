@@ -7,10 +7,10 @@
     <spacex-filters (filtersUpdated)="filtersUpdated($event)" [filters]="appliedFilters"></spacex-filters>
 </div>
 <div class="programs-container">
-    <spacex-programs [missions]="filteredData" *ngIf="filteredData && isDataLoaded"></spacex-programs>
-    <div *ngIf="!isDataLoaded">
+    <spacex-programs [missions]="filteredData" *ngIf="filteredData"></spacex-programs>
+    <!-- <div *ngIf="!isDataLoaded">
         <spacex-loader [isSmall]="true"></spacex-loader>
-    </div>
+    </div> -->
   
       
 </div>
